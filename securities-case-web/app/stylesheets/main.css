@@ -24,6 +24,28 @@ body {
   box-shadow: 0 0.3em 5px #ddd;
   position: fixed;
   top:0; right:0; left:0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 500;
+}
+
+.button {
+    display: block;
+    border: 1px solid #ff6e00;
+    border-radius: 4px;
+    padding: 1em 2em;
+    line-height: 0.2;
+    color: #ff6e00;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+
+.button:hover {
+  transition: all .2s ease-out;
+  color: #fff;
+  background-color: #ff6e00;
 }
 
 .logo {
@@ -60,9 +82,8 @@ body {
   animation:         animateNegative 1s forwards;
 }
 
-.current {
-  margin-right: 1em;
-}
+.current { margin-right: 1em; }
+.diff { font-size: 0.7em; }
 
 @-webkit-keyframes animatePositive {
   0%   { color: normal; -webkit-transform: scale(1); -webkit-transform: scale(1); }

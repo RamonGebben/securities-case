@@ -120,7 +120,7 @@
 
 
 	// module
-	exports.push([module.id, "\n@font-face {\n  font-family: INGMe;\n  src: url('https://www.ing.nl/assets/web/ng/fonts/woff/INGMeWeb-Regular.woff');\n}\n\n*, *:before, *:after {\n    box-sizing: border-box;\n}\n\nhtml, body {margin: 0; padding: 0;}\n\nbody {\n  background: #f0f0f0;\n  color: #333;\n  font-family: INGMe,Arial,sans-serif;\n}\n\n.app { margin-top: 60px; }\n\n.nav {\n  height: 60px; background: #fff;\n  padding: 1em;\n  box-shadow: 0 0.3em 5px #ddd;\n  position: fixed;\n  top:0; right:0; left:0;\n}\n\n.logo {\n  background-image: url('http://www.ing.com/static/ingdotcompresentation/static/img/logos/logo.hd.png');\n  width: 238px; height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n\n.instruments {\n  max-width: 756px;\n  width: 100%;\n  margin: 0 auto;\n}\n\n.instrument {\n  display: flex;\n  justify-content: space-between;\n  border-bottom: 1px solid #ddd;\n  padding: 1em;\n}\n\n.positive .current {\n  -webkit-animation: animatePositive 1s forwards;\n  -moz-animation:    animatePositive 1s forwards;\n  -o-animation:      animatePositive 1s forwards;\n  animation:         animatePositive 1s forwards;\n}\n\n.negative .current {\n  -webkit-animation: animateNegative 1s forwards;\n  -moz-animation:    animateNegative 1s forwards;\n  -o-animation:      animateNegative 1s forwards;\n  animation:         animateNegative 1s forwards;\n}\n\n.current {\n  margin-right: 1em;\n}\n\n@-webkit-keyframes animatePositive {\n  0%   { color: normal; -webkit-transform: scale(1); -webkit-transform: scale(1); }\n  50%   { color: #34D249; -webkit-transform: scale(1.2); }\n  100% { color: normal; -webkit-transform: scale(1); }\n}\n@-moz-keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@-o-keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n\n@-webkit-keyframes animateNegative {\n  0%   { color: normal; -webkit-transform: scale(1); }\n  50%   { color: #FF4B3D; -webkit-transform: scale(1.2); }\n  100% { color: normal; -webkit-transform: scale(1); }\n}\n@-moz-keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@-o-keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n\n/* Start React Transition group defintion */\n.fadeIn-enter {\n  opacity: 0.01;\n}\n\n.fadeIn-enter.fadeIn-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.fadeIn-leave {\n  opacity: 1;\n}\n\n.fadeIn-leave.fadeIn-leave-active {\n  opacity: 0.01;\n  transition: opacity 300ms ease-in;\n}\n\n/* End React Transition group defintion */\n", ""]);
+	exports.push([module.id, "\n@font-face {\n  font-family: INGMe;\n  src: url('https://www.ing.nl/assets/web/ng/fonts/woff/INGMeWeb-Regular.woff');\n}\n\n*, *:before, *:after {\n    box-sizing: border-box;\n}\n\nhtml, body {margin: 0; padding: 0;}\n\nbody {\n  background: #f0f0f0;\n  color: #333;\n  font-family: INGMe,Arial,sans-serif;\n}\n\n.app { margin-top: 60px; }\n\n.nav {\n  height: 60px; background: #fff;\n  padding: 1em;\n  box-shadow: 0 0.3em 5px #ddd;\n  position: fixed;\n  top:0; right:0; left:0;\n  display: flex;\n  justify-content: space-between;\n  z-index: 500;\n}\n\n.button {\n    display: block;\n    border: 1px solid #ff6e00;\n    border-radius: 4px;\n    padding: 1em 2em;\n    line-height: 0.2;\n    color: #ff6e00;\n    -webkit-user-select: none;\n    cursor: pointer;\n    text-decoration: none;\n    transition: all .2s ease-out;\n}\n\n.button:hover {\n  transition: all .2s ease-out;\n  color: #fff;\n  background-color: #ff6e00;\n}\n\n.logo {\n  background-image: url('http://www.ing.com/static/ingdotcompresentation/static/img/logos/logo.hd.png');\n  width: 238px; height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n\n.instruments {\n  max-width: 756px;\n  width: 100%;\n  margin: 0 auto;\n}\n\n.instrument {\n  display: flex;\n  justify-content: space-between;\n  border-bottom: 1px solid #ddd;\n  padding: 1em;\n}\n\n.positive .current {\n  -webkit-animation: animatePositive 1s forwards;\n  -moz-animation:    animatePositive 1s forwards;\n  -o-animation:      animatePositive 1s forwards;\n  animation:         animatePositive 1s forwards;\n}\n\n.negative .current {\n  -webkit-animation: animateNegative 1s forwards;\n  -moz-animation:    animateNegative 1s forwards;\n  -o-animation:      animateNegative 1s forwards;\n  animation:         animateNegative 1s forwards;\n}\n\n.current { margin-right: 1em; }\n.diff { font-size: 0.7em; }\n\n@-webkit-keyframes animatePositive {\n  0%   { color: normal; -webkit-transform: scale(1); -webkit-transform: scale(1); }\n  50%   { color: #34D249; -webkit-transform: scale(1.2); }\n  100% { color: normal; -webkit-transform: scale(1); }\n}\n@-moz-keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@-o-keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n\n@-webkit-keyframes animateNegative {\n  0%   { color: normal; -webkit-transform: scale(1); }\n  50%   { color: #FF4B3D; -webkit-transform: scale(1.2); }\n  100% { color: normal; -webkit-transform: scale(1); }\n}\n@-moz-keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@-o-keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n\n/* Start React Transition group defintion */\n.fadeIn-enter {\n  opacity: 0.01;\n}\n\n.fadeIn-enter.fadeIn-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.fadeIn-leave {\n  opacity: 1;\n}\n\n.fadeIn-leave.fadeIn-leave-active {\n  opacity: 0.01;\n  transition: opacity 300ms ease-in;\n}\n\n/* End React Transition group defintion */\n", ""]);
 
 	// exports
 
@@ -21533,16 +21533,30 @@
 	var _react2 = _interopRequireDefault(_react);
 
 	/**
+	 * Gives you the content of the "Hired" email
+	 * @method getEmailBody
+	 * @return {string}     URI encoded email body;
+	 */
+	function getEmailBody() {
+	  return encodeURIComponent('Dear Saskia,\n\n  We would like to let you know that we want to hire Ramon to help us create our React Native application.\n\n  Kind regards,\n\n  <Your Name>\n  ING\n  ');
+	}
+
+	/**
 	 * The navigation bar
 	 * @method Nav
 	 * @param  {object} props React props object
-	 * @return {ReactComponent} 
+	 * @return {ReactComponent}
 	 */
 	function Nav(props) {
 	  return _react2['default'].createElement(
 	    'nav',
 	    { className: 'nav' },
-	    _react2['default'].createElement('div', { className: 'logo' })
+	    _react2['default'].createElement('div', { className: 'logo' }),
+	    _react2['default'].createElement(
+	      'a',
+	      { href: 'mailto:saskia@sytac.nl?subject=Hire%20Ramon&body=' + getEmailBody(), className: 'button' },
+	      'HIRE'
+	    )
 	  );
 	}
 
