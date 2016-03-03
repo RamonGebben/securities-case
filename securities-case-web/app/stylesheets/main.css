@@ -68,64 +68,8 @@ body {
   padding: 1em;
 }
 
-.positive .current {
-  -webkit-animation: animatePositive 1s forwards;
-  -moz-animation:    animatePositive 1s forwards;
-  -o-animation:      animatePositive 1s forwards;
-  animation:         animatePositive 1s forwards;
-}
-
-.negative .current {
-  -webkit-animation: animateNegative 1s forwards;
-  -moz-animation:    animateNegative 1s forwards;
-  -o-animation:      animateNegative 1s forwards;
-  animation:         animateNegative 1s forwards;
-}
-
-.current { margin-right: 1em; }
+.current { margin-right: 1em; transition: all .3s ease-out; }
 .diff { font-size: 0.7em; }
-
-@-webkit-keyframes animatePositive {
-  0%   { color: normal; -webkit-transform: scale(1); -webkit-transform: scale(1); }
-  50%   { color: #34D249; -webkit-transform: scale(1.2); }
-  100% { color: normal; -webkit-transform: scale(1); }
-}
-@-moz-keyframes animatePositive {
-  0%   { color: normal; transform: scale(1); }
-  50%   { color: #34D249; transform: scale(1.2); }
-  100% { color: normal; transform: scale(1); }
-}
-@-o-keyframes animatePositive {
-  0%   { color: normal; transform: scale(1); }
-  50%   { color: #34D249; transform: scale(1.2); }
-  100% { color: normal; transform: scale(1); }
-}
-@keyframes animatePositive {
-  0%   { color: normal; transform: scale(1); }
-  50%   { color: #34D249; transform: scale(1.2); }
-  100% { color: normal; transform: scale(1); }
-}
-
-@-webkit-keyframes animateNegative {
-  0%   { color: normal; -webkit-transform: scale(1); }
-  50%   { color: #FF4B3D; -webkit-transform: scale(1.2); }
-  100% { color: normal; -webkit-transform: scale(1); }
-}
-@-moz-keyframes animateNegative {
-  0%   { color: normal; transform: scale(1); }
-  50%   { color: #FF4B3D; transform: scale(1.2); }
-  100% { color: normal; transform: scale(1); }
-}
-@-o-keyframes animateNegative {
-  0%   { color: normal; transform: scale(1); }
-  50%   { color: #FF4B3D; transform: scale(1.2); }
-  100% { color: normal; transform: scale(1); }
-}
-@keyframes animateNegative {
-  0%   { color: normal; transform: scale(1); }
-  50%   { color: #FF4B3D; transform: scale(1.2); }
-  100% { color: normal; transform: scale(1); }
-}
 
 /* Start React Transition group defintion */
 .fadeIn-enter {

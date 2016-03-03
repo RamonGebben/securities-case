@@ -120,7 +120,7 @@
 
 
 	// module
-	exports.push([module.id, "\n@font-face {\n  font-family: INGMe;\n  src: url('https://www.ing.nl/assets/web/ng/fonts/woff/INGMeWeb-Regular.woff');\n}\n\n*, *:before, *:after {\n    box-sizing: border-box;\n}\n\nhtml, body {margin: 0; padding: 0;}\n\nbody {\n  background: #f0f0f0;\n  color: #333;\n  font-family: INGMe,Arial,sans-serif;\n}\n\n.app { margin-top: 60px; }\n\n.nav {\n  height: 60px; background: #fff;\n  padding: 1em;\n  box-shadow: 0 0.3em 5px #ddd;\n  position: fixed;\n  top:0; right:0; left:0;\n  display: flex;\n  justify-content: space-between;\n  z-index: 500;\n}\n\n.button {\n    display: block;\n    border: 1px solid #ff6e00;\n    border-radius: 4px;\n    padding: 1em 2em;\n    line-height: 0.2;\n    color: #ff6e00;\n    -webkit-user-select: none;\n    cursor: pointer;\n    text-decoration: none;\n    transition: all .2s ease-out;\n}\n\n.button:hover {\n  transition: all .2s ease-out;\n  color: #fff;\n  background-color: #ff6e00;\n}\n\n.logo {\n  background-image: url('http://www.ing.com/static/ingdotcompresentation/static/img/logos/logo.hd.png');\n  width: 238px; height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n\n.instruments {\n  max-width: 756px;\n  width: 100%;\n  margin: 0 auto;\n}\n\n.instrument {\n  display: flex;\n  justify-content: space-between;\n  border-bottom: 1px solid #ddd;\n  padding: 1em;\n}\n\n.positive .current {\n  -webkit-animation: animatePositive 1s forwards;\n  -moz-animation:    animatePositive 1s forwards;\n  -o-animation:      animatePositive 1s forwards;\n  animation:         animatePositive 1s forwards;\n}\n\n.negative .current {\n  -webkit-animation: animateNegative 1s forwards;\n  -moz-animation:    animateNegative 1s forwards;\n  -o-animation:      animateNegative 1s forwards;\n  animation:         animateNegative 1s forwards;\n}\n\n.current { margin-right: 1em; }\n.diff { font-size: 0.7em; }\n\n@-webkit-keyframes animatePositive {\n  0%   { color: normal; -webkit-transform: scale(1); -webkit-transform: scale(1); }\n  50%   { color: #34D249; -webkit-transform: scale(1.2); }\n  100% { color: normal; -webkit-transform: scale(1); }\n}\n@-moz-keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@-o-keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@keyframes animatePositive {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #34D249; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n\n@-webkit-keyframes animateNegative {\n  0%   { color: normal; -webkit-transform: scale(1); }\n  50%   { color: #FF4B3D; -webkit-transform: scale(1.2); }\n  100% { color: normal; -webkit-transform: scale(1); }\n}\n@-moz-keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@-o-keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n@keyframes animateNegative {\n  0%   { color: normal; transform: scale(1); }\n  50%   { color: #FF4B3D; transform: scale(1.2); }\n  100% { color: normal; transform: scale(1); }\n}\n\n/* Start React Transition group defintion */\n.fadeIn-enter {\n  opacity: 0.01;\n}\n\n.fadeIn-enter.fadeIn-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.fadeIn-leave {\n  opacity: 1;\n}\n\n.fadeIn-leave.fadeIn-leave-active {\n  opacity: 0.01;\n  transition: opacity 300ms ease-in;\n}\n\n/* End React Transition group defintion */\n", ""]);
+	exports.push([module.id, "\n@font-face {\n  font-family: INGMe;\n  src: url('https://www.ing.nl/assets/web/ng/fonts/woff/INGMeWeb-Regular.woff');\n}\n\n*, *:before, *:after {\n    box-sizing: border-box;\n}\n\nhtml, body {margin: 0; padding: 0;}\n\nbody {\n  background: #f0f0f0;\n  color: #333;\n  font-family: INGMe,Arial,sans-serif;\n}\n\n.app { margin-top: 60px; }\n\n.nav {\n  height: 60px; background: #fff;\n  padding: 1em;\n  box-shadow: 0 0.3em 5px #ddd;\n  position: fixed;\n  top:0; right:0; left:0;\n  display: flex;\n  justify-content: space-between;\n  z-index: 500;\n}\n\n.button {\n    display: block;\n    border: 1px solid #ff6e00;\n    border-radius: 4px;\n    padding: 1em 2em;\n    line-height: 0.2;\n    color: #ff6e00;\n    -webkit-user-select: none;\n    cursor: pointer;\n    text-decoration: none;\n    transition: all .2s ease-out;\n}\n\n.button:hover {\n  transition: all .2s ease-out;\n  color: #fff;\n  background-color: #ff6e00;\n}\n\n.logo {\n  background-image: url('http://www.ing.com/static/ingdotcompresentation/static/img/logos/logo.hd.png');\n  width: 238px; height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n}\n\n.instruments {\n  max-width: 756px;\n  width: 100%;\n  margin: 0 auto;\n}\n\n.instrument {\n  display: flex;\n  justify-content: space-between;\n  border-bottom: 1px solid #ddd;\n  padding: 1em;\n}\n\n.current { margin-right: 1em; transition: all .3s ease-out; }\n.diff { font-size: 0.7em; }\n\n/* Start React Transition group defintion */\n.fadeIn-enter {\n  opacity: 0.01;\n}\n\n.fadeIn-enter.fadeIn-enter-active {\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n\n.fadeIn-leave {\n  opacity: 1;\n}\n\n.fadeIn-leave.fadeIn-leave-active {\n  opacity: 0.01;\n  transition: opacity 300ms ease-in;\n}\n\n/* End React Transition group defintion */\n", ""]);
 
 	// exports
 
@@ -20469,34 +20469,6 @@
 
 	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
-	var POSITIVE_CLASS = 'positive';
-	var NEGATIVE_CLASS = 'negative';
-	var DEFAULT_CLASS = 'default';
-
-	/**
-	 * Gives you the color class based on
-	 * the difference between the current value and the previous value
-	 * @method getClassName
-	 * @param  {object} item  instrument object which hold current and prev
-	 * @return {string}      the className you will need
-	 */
-	function getClassName(item) {
-	  if (item.current.amount > item.prev.amount) return POSITIVE_CLASS;
-	  if (item.current.amount < item.prev.amount) return NEGATIVE_CLASS;
-	  return DEFAULT_CLASS;
-	}
-
-	/**
-	 * calculated the difference between
-	 * the current value and the previous value to return a percentage
-	 * @method calculateDiff
-	 * @param  {object} item  instrument object which hold current and prev
-	 * @return {number}       percentage amount of the difference
-	 */
-	function calculateDiff(item) {
-	  return (item.prev.amount - item.current.amount) / item.prev.amount * 100;
-	}
-
 	var Instruments = (function (_React$Component) {
 	  _inherits(Instruments, _React$Component);
 
@@ -20525,13 +20497,7 @@
 	    key: 'render',
 	    value: function render() {
 	      var instruments = (0, _helpersIntersperse2['default'])(this.props.items.map(function (item, i) {
-	        var className = getClassName(item);
-	        return _react2['default'].createElement(_Instrument2['default'], {
-	          className: className,
-	          code: item.code,
-	          amount: item.current.amount,
-	          diff: calculateDiff(item),
-	          key: i });
+	        return _react2['default'].createElement(_Instrument2['default'], { item: item, decimal: 4, key: i });
 	      }), '');
 
 	      return _react2['default'].createElement(
@@ -20580,6 +20546,34 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var POSITIVE_COLOR = '#34D249';
+	var NEGATIVE_COLOR = '#FF4B3D';
+	var DEFAULT_COLOR = '#000000';
+
+	/**
+	 * Gives you the color class based on
+	 * the difference between the current value and the previous value
+	 * @method getColor
+	 * @param  {object} item  instrument object which hold current and prev
+	 * @return {string}      the className you will need
+	 */
+	function getColor(item) {
+	  if (item.current.amount > item.prev.amount) return POSITIVE_COLOR;
+	  if (item.current.amount < item.prev.amount) return NEGATIVE_COLOR;
+	  if (item.current.amount === item.prev.amount) return DEFAULT_COLOR;
+	}
+
+	/**
+	 * calculated the difference between
+	 * the current value and the previous value to return a percentage
+	 * @method calculateDiff
+	 * @param  {object} item  instrument object which hold current and prev
+	 * @return {number}       percentage amount of the difference
+	 */
+	function calculateDiff(item) {
+	  return (item.prev.amount - item.current.amount) / item.prev.amount * 100;
+	}
+
 	var Instrument = (function (_React$Component) {
 	  _inherits(Instrument, _React$Component);
 
@@ -20588,7 +20582,9 @@
 
 	    _get(Object.getPrototypeOf(Instrument.prototype), 'constructor', this).call(this, props);
 	    this.props = props;
-	    this.state = {};
+	    this.state = {
+	      color: getColor(props.item)
+	    };
 	    this.animationTimer = null;
 	  }
 
@@ -20600,6 +20596,26 @@
 	  _createClass(Instrument, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {}
+
+	    /**
+	     * React life cycle event fired when component has mounted
+	     * @method componentDidMount
+	     */
+	  }, {
+	    key: 'shouldComponentUpdate',
+	    value: function shouldComponentUpdate(nextProps, nextState) {
+	      return this.state.color !== nextState.color;
+	    }
+
+	    /**
+	     * React life cycle event fired when component receives props
+	     * @method componentWillReceiveProps
+	     */
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.setState({ color: getColor(nextProps.item) });
+	    }
 
 	    /**
 	     * React life cycle event fired when component props or state got updated
@@ -20632,8 +20648,8 @@
 
 	      this.clearAnimationTimer();
 	      this.animationTimer = setTimeout(function () {
-	        _this.refs.instrument.classList.remove(_this.props.className);
-	      }, 900);
+	        _this.setState({ color: DEFAULT_COLOR });
+	      }, 2000);
 	    }
 
 	    /**
@@ -20656,24 +20672,24 @@
 	      var props = this.props;
 	      return _react2['default'].createElement(
 	        'div',
-	        { ref: 'instrument', className: 'instrument ' + props.className },
+	        { ref: 'instrument', className: 'instrument' },
 	        _react2['default'].createElement(
 	          'div',
 	          { className: 'code' },
-	          props.code
+	          props.item.code
 	        ),
 	        _react2['default'].createElement(
 	          'div',
 	          { className: 'amount' },
 	          _react2['default'].createElement(
 	            'span',
-	            { className: 'current' },
-	            props.amount.toFixed(2)
+	            { className: 'current', style: { color: this.state.color } },
+	            props.item.current.amount.toFixed(props.decimal)
 	          ),
 	          _react2['default'].createElement(
 	            'span',
 	            { className: 'diff' },
-	            (props.diff.toFixed(2) || 0.00) + '%'
+	            (calculateDiff(props.item).toFixed(props.decimal) || 0.00) + '%'
 	          )
 	        )
 	      );
@@ -20682,6 +20698,8 @@
 
 	  return Instrument;
 	})(_react2['default'].Component);
+
+	Instrument.defaultProps = { decimal: 2 };
 
 	exports['default'] = Instrument;
 	module.exports = exports['default'];

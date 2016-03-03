@@ -1,0 +1,4 @@
+securities/web/BootApp.class
+securities/web/InstrumentUpdateController.class
+securities/web/WebSocketConfig.class
+securities/web/InstrumentController.class

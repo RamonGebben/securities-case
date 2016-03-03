@@ -1,19 +1,65 @@
 import React from 'react';
 
+const POSITIVE_COLOR = '#34D249';
+const NEGATIVE_COLOR = '#FF4B3D';
+const DEFAULT_COLOR  = '#000000';
+
+/**
+ * Gives you the color class based on
+ * the difference between the current value and the previous value
+ * @method getColor
+ * @param  {object} item  instrument object which hold current and prev
+ * @return {string}      the className you will need
+ */
+function getColor(item){
+  if( item.current.amount > item.prev.amount ) return POSITIVE_COLOR;
+  if( item.current.amount < item.prev.amount ) return NEGATIVE_COLOR;
+  if( item.current.amount === item.prev.amount ) return DEFAULT_COLOR;
+}
+
+/**
+ * calculated the difference between
+ * the current value and the previous value to return a percentage
+ * @method calculateDiff
+ * @param  {object} item  instrument object which hold current and prev
+ * @return {number}       percentage amount of the difference
+ */
+function calculateDiff(item){
+  return (item.prev.amount - item.current.amount) / item.prev.amount * 100;
+}
+
 class Instrument extends React.Component {
 
   constructor(props){
     super(props);
     this.props = props;
     this.state = {
+      color: getColor(props.item)
     }
     this.animationTimer = null;
   }
+
   /**
    * React life cycle event fired when component has mounted
    * @method componentDidMount
    */
   componentDidMount(){
+  }
+
+  /**
+   * React life cycle event fired when component has mounted
+   * @method componentDidMount
+   */
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.color !== nextState.color;
+  }
+
+  /**
+   * React life cycle event fired when component receives props
+   * @method componentWillReceiveProps
+   */
+  componentWillReceiveProps(nextProps){
+    this.setState({ color: getColor(nextProps.item) });
   }
 
   /**
@@ -39,8 +85,8 @@ class Instrument extends React.Component {
   startAnimationTimer(){
     this.clearAnimationTimer()
     this.animationTimer = setTimeout(() => {
-      this.refs.instrument.classList.remove(this.props.className);
-    }, 900)
+      this.setState({color: DEFAULT_COLOR});
+    }, 2000);
   }
 
   /**
@@ -58,16 +104,18 @@ class Instrument extends React.Component {
   render() {
     let props = this.props;
     return (
-        <div ref='instrument' className={`instrument ${props.className}`}>
-          <div className='code'>{props.code}</div>
+        <div ref='instrument' className='instrument'>
+          <div className='code'>{props.item.code}</div>
           <div className='amount'>
-            <span className='current'>{props.amount.toFixed(2)}</span>
-            <span className='diff'>{`${props.diff.toFixed(2) || 0.00}%`}</span>
+            <span className='current' style={{ color: this.state.color }}>{props.item.current.amount.toFixed(props.decimal)}</span>
+            <span className='diff'>{`${calculateDiff(props.item).toFixed(props.decimal) || 0.00}%`}</span>
           </div>
 
         </div>
     );
   }
 }
+
+Instrument.defaultProps = { decimal: 2 };
 
 export default Instrument;
