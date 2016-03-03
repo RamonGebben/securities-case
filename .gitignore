@@ -1,2 +1,11 @@
+node_modules
+.DS_Store
+app/.DS_Store
+securities-case-web/node_modules
+
+## File-based project format:
+*.ipr
+*.iws
+
 /.settings/
 /.project
