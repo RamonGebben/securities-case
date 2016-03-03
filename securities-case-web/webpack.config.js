@@ -20,7 +20,7 @@ var common = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React ES2015 Template'
+      title: 'ING Case'
     })
   ],
 
@@ -44,16 +44,16 @@ switch (TARGET) {
   case 'build':
     module.exports = merge(common, {
       plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-          compress: {
-            warnings: false
-          }
-        }),
-        new webpack.DefinePlugin({
-          'process.env': {
-            'NODE_ENV': JSON.stringify('production')
-          }
-        })
+        // new webpack.optimize.UglifyJsPlugin({
+        //   compress: {
+        //     warnings: false
+        //   }
+        // }),
+        // new webpack.DefinePlugin({
+        //   'process.env': {
+        //     'NODE_ENV': JSON.stringify('production')
+        //   }
+        // })
       ]
     });
 

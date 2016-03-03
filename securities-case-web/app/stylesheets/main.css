@@ -1,9 +1,128 @@
 
+@font-face {
+  font-family: INGMe;
+  src: url('https://www.ing.nl/assets/web/ng/fonts/woff/INGMeWeb-Regular.woff');
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
+html, body {margin: 0; padding: 0;}
+
 body {
   background: #f0f0f0;
   color: #333;
+  font-family: INGMe,Arial,sans-serif;
 }
+
+.app { margin-top: 60px; }
+
+.nav {
+  height: 60px; background: #fff;
+  padding: 1em;
+  box-shadow: 0 0.3em 5px #ddd;
+  position: fixed;
+  top:0; right:0; left:0;
+}
+
+.logo {
+  background-image: url('http://www.ing.com/static/ingdotcompresentation/static/img/logos/logo.hd.png');
+  width: 238px; height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.instruments {
+  max-width: 756px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.instrument {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 1em;
+}
+
+.positive .current {
+  -webkit-animation: animatePositive 1s forwards;
+  -moz-animation:    animatePositive 1s forwards;
+  -o-animation:      animatePositive 1s forwards;
+  animation:         animatePositive 1s forwards;
+}
+
+.negative .current {
+  -webkit-animation: animateNegative 1s forwards;
+  -moz-animation:    animateNegative 1s forwards;
+  -o-animation:      animateNegative 1s forwards;
+  animation:         animateNegative 1s forwards;
+}
+
+.current {
+  margin-right: 1em;
+}
+
+@-webkit-keyframes animatePositive {
+  0%   { color: normal; -webkit-transform: scale(1); -webkit-transform: scale(1); }
+  50%   { color: #34D249; -webkit-transform: scale(1.2); }
+  100% { color: normal; -webkit-transform: scale(1); }
+}
+@-moz-keyframes animatePositive {
+  0%   { color: normal; transform: scale(1); }
+  50%   { color: #34D249; transform: scale(1.2); }
+  100% { color: normal; transform: scale(1); }
+}
+@-o-keyframes animatePositive {
+  0%   { color: normal; transform: scale(1); }
+  50%   { color: #34D249; transform: scale(1.2); }
+  100% { color: normal; transform: scale(1); }
+}
+@keyframes animatePositive {
+  0%   { color: normal; transform: scale(1); }
+  50%   { color: #34D249; transform: scale(1.2); }
+  100% { color: normal; transform: scale(1); }
+}
+
+@-webkit-keyframes animateNegative {
+  0%   { color: normal; -webkit-transform: scale(1); }
+  50%   { color: #FF4B3D; -webkit-transform: scale(1.2); }
+  100% { color: normal; -webkit-transform: scale(1); }
+}
+@-moz-keyframes animateNegative {
+  0%   { color: normal; transform: scale(1); }
+  50%   { color: #FF4B3D; transform: scale(1.2); }
+  100% { color: normal; transform: scale(1); }
+}
+@-o-keyframes animateNegative {
+  0%   { color: normal; transform: scale(1); }
+  50%   { color: #FF4B3D; transform: scale(1.2); }
+  100% { color: normal; transform: scale(1); }
+}
+@keyframes animateNegative {
+  0%   { color: normal; transform: scale(1); }
+  50%   { color: #FF4B3D; transform: scale(1.2); }
+  100% { color: normal; transform: scale(1); }
+}
+
+/* Start React Transition group defintion */
+.fadeIn-enter {
+  opacity: 0.01;
+}
+
+.fadeIn-enter.fadeIn-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fadeIn-leave {
+  opacity: 1;
+}
+
+.fadeIn-leave.fadeIn-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+/* End React Transition group defintion */

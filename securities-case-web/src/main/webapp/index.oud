@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>WebSocket Stomp Receiving Example</title>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.11.2/jquery.min.js"></script>
 </head>
 <body>
     <div>
@@ -9,7 +10,7 @@
         <ol id="messages"></ol>
     </div>
 
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1.11.2/jquery.min.js"></script>
+
     <script type="text/javascript" src="//cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 
