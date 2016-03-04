@@ -28,7 +28,11 @@ var common = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel?stage=1'],
+	query: {
+	  presets: ['react', 'es2015']
+	},
+        loader: 'babel',
+	exclude: /(node_modules|bower_components)/,
         include: path.resolve(ROOT_PATH, 'app')
       },
 
