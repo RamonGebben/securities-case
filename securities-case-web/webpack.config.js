@@ -28,11 +28,11 @@ var common = {
     loaders: [
       {
         test: /\.jsx?$/,
-	query: {
-	  presets: ['react', 'es2015']
-	},
+        	query: {
+        	  presets: ['react', 'es2015']
+        	},
         loader: 'babel',
-	exclude: /(node_modules|bower_components)/,
+	      exclude: /(node_modules|bower_components)/,
         include: path.resolve(ROOT_PATH, 'app')
       },
 

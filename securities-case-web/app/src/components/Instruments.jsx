@@ -8,8 +8,7 @@ class Instruments extends React.Component {
   constructor(props){
     super(props);
     this.props = props;
-    this.state = {
-    }
+    this.state = {};
   }
 
   /**

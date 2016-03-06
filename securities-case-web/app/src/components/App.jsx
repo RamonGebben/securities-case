@@ -24,7 +24,7 @@ class App extends React.Component {
     this.props = props;
     this.state = {
       instruments: []
-    }
+    };
   }
   /**
    * React life cycle event fired when component has mounted
@@ -95,7 +95,7 @@ class App extends React.Component {
    * @param  {object}           message parsed message object
    */
   _onMessageReceived(message){
-    if( this.state.instruments.length < 0 ) return
+    if( this.state.instruments.length < 0 ) return;
     let updatedIndex = this.state.instruments.findIndex(instrument => message.code === instrument.code);
     let updatedInstrument = _.cloneDeep(this.state.instruments[updatedIndex]);
     let state = _.cloneDeep(this.state.instruments);

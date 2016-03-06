@@ -35,7 +35,7 @@ class Instrument extends React.Component {
     this.props = props;
     this.state = {
       color: getColor(props.item)
-    }
+    };
     this.animationTimer = null;
   }
 
@@ -67,7 +67,7 @@ class Instrument extends React.Component {
    * @method componentDidUpdate
    */
   componentDidUpdate(){
-    this.startAnimationTimer()
+    this.startAnimationTimer();
   }
 
   /**
@@ -83,7 +83,7 @@ class Instrument extends React.Component {
    * @method startAnimationTimer
    */
   startAnimationTimer(){
-    this.clearAnimationTimer()
+    this.clearAnimationTimer();
     this.animationTimer = setTimeout(() => {
       this.setState({color: DEFAULT_COLOR});
     }, 2000);
